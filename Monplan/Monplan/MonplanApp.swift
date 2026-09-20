@@ -25,7 +25,28 @@ struct MonplanApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Label("ホーム", systemImage: "house")
+                    }
+                ContentView()
+                    .tabItem {
+                        Label("一覧", systemImage: "list.bullet")
+                    }
+                ExpenseListView()
+                    .tabItem {
+                        Label("支出一覧", systemImage: "yensign.circle")
+                    }
+                BudgetView()
+                    .tabItem {
+                        Label("予算", systemImage: "barcode")
+                    }
+                HistoryView()
+                    .tabItem {
+                        Label("履歴", systemImage: "clock")
+                    }
+            }
         }
         .modelContainer(sharedModelContainer)
     }
