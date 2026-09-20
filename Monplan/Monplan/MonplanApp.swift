@@ -34,6 +34,18 @@ struct MonplanApp: App {
                     .tabItem {
                         Label("一覧", systemImage: "list.bullet")
                     }
+                ExpenseListView()
+                    .tabItem {
+                        Label("支出一覧", systemImage: "yensign.circle")
+                    }
+                BudgetView()
+                    .tabItem {
+                        Label("予算", systemImage: "barcode")
+                    }
+                HistoryView()
+                    .tabItem {
+                        Label("履歴", systemImage: "clock")
+                    }
             }
         }
         .modelContainer(sharedModelContainer)

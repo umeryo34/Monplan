@@ -15,7 +15,8 @@ struct HomeView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 32)
             Rectangle()
-                .frame(width: .infinity, height: 300)
+                .frame(maxWidth: .infinity)
+                .frame(height: 300)
                 .padding()
         }
     }
